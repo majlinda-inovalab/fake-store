@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9eed8a3;
+}
+.navigation {
+  background-color: #f9eed8a3;;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px 40px;
+  margin-top: 40px;
+}
+.navigation li {
+  text-align: center;
+  list-style-type: none;
+  margin-right: 50px;
+}
+.navigation li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #51554f;
+  font-weight: bold;
+}
+
+.navigation li a:hover {
+  color: #966575;
+}
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+.footer {
+  background-color: #f9eed8a3;
+  color: #666;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
+}
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+}
+.category-image {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 100%;
+  max-width: 300px;
+}
+.category-image img {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+}
+.category-name h2 {
+  color: #51554f;
+  font-weight: bold;
+}
+
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 20px;
+}
+.product{
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+.product-image {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 280px;
+  height: 100%;
+  max-width: 300px;
+}
+.product-image img {
+  height: 350px;
+  width: 100%;
+  border-radius: 6px;
+}
+.product-content h2 {
+  color: #51554f;
+  font-weight: bold;
+  font-size: 13px;
+  max-width: 16rem;
+}
+.product-price{
+  font-size: 14px;
+  color: #966575;;
+}
+.products-page {
+  display: flex;
+  padding: 20px;
+}
+
+.category-filter {
+  flex: 1;
+  max-width: 150px;
+  margin-right: 20px;
+  padding: 25px 30px;
+}
+
+.product-container {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.category-item {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 0;
+  width: 250px;
+  padding: 6px 9px;
+}
+
+

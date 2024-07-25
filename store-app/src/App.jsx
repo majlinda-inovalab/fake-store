@@ -5,13 +5,11 @@ import ProductsPage from "./pages/ProductsPage";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:productId" element={<Product />} />
-        <Route path="/products" element={<ProductsPage />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/product/:productId" element={<Product />} />
+      <Route path="/products" element={<ProductsPage />} />
+    </Routes>
   );
 }
 

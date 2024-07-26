@@ -65,6 +65,10 @@ main {
   font-weight: bold;
 }
 
+.category-name h2:hover {
+  color: #966575;
+}
+
 .product-container{
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +99,12 @@ main {
   font-weight: bold;
   font-size: 13px;
   max-width: 16rem;
+}
+.product-content h2:hover {
+  color: #966575;
+}
+.no-underline{
+  text-decoration: none;
 }
 .product-price{
   font-size: 14px;

@@ -3,7 +3,7 @@ body {
   background-color: #f9eed8a3;
 }
 .navigation {
-  background-color: #f9eed8a3;;
+  background-color: #f9eed8a3;
   text-align: center;
   justify-content: center;
   display: flex;
@@ -69,7 +69,7 @@ main {
   color: #966575;
 }
 
-.product-container{
+.product-container {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -77,19 +77,19 @@ main {
   align-items: center;
   padding: 15px 20px;
 }
-.product{
+.product {
   background-color: white;
   padding: 15px 25px;
   border-radius: 10px;
 }
-.product-image {
+.product .product-image {
   border-radius: 8px;
   overflow: hidden;
   width: 280px;
   height: 100%;
   max-width: 300px;
 }
-.product-image img {
+.product .product-image img {
   height: 350px;
   width: 100%;
   border-radius: 6px;
@@ -103,12 +103,12 @@ main {
 .product-content h2:hover {
   color: #966575;
 }
-.no-underline{
+.no-underline {
   text-decoration: none;
 }
-.product-price{
+.product-price {
   font-size: 14px;
-  color: #966575;;
+  color: #966575;
 }
 .products-page {
   display: flex;
@@ -131,14 +131,84 @@ main {
   align-items: center;
 }
 
-
 .category-item {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   width: 250px;
   padding: 6px 9px;
 }
 
+.product-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+  padding: 20px 30px;
+}
+.productContent{
+  align-items: center;
+}
+.product-item img{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 100%;
+  max-width: 300px;
+}
 
+.star {
+  font-size: 1.7rem;
+  color: gold;
+}
+
+.star.empty {
+  color: lightgray;
+}
+
+.star.half:before {
+  content: "★";
+  color: gold;
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+}
+.reviews {
+  font-style: italic;
+}
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial, sans-serif";
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #966575;
+}
+.about-container h2 {
+  margin-top: 30px;
+  color: #966575;
+}
+
+.about-container p {
+  margin-bottom: 20px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon .cart-count {
+
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+}

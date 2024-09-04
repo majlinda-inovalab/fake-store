@@ -12,6 +12,7 @@ const ProductsPage = () => {
       {products.length > 0 ? (
         <div className="products-page">
           <div className="category-filter">
+            <h3>Category</h3>
             <Category />
           </div>
           <div className="product-container">

@@ -45,19 +45,20 @@ const Home = () => {
       <div className="category-container">
         {categories.map((category) => {
           return (
-            <div className="category" key={category.id}>
-              <div className="category-image">
-                <img src={category.image} alt="Category Image" />
-              </div>
-              <div className="category-name">
-                <Link
-                  to={`/category/${category.code}`}
-                  className="no-underline"
-                >
+            <Link
+              to={`/products/category/${category.code}`}
+              className="no-underline"
+              key={category.id}
+            >
+              <div className="category" key={category.id}>
+                <div className="category-image">
+                  <img src={category.image} alt="Category Image" />
+                </div>
+                <div className="category-name">
                   <h2>{category.name}</h2>{" "}
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

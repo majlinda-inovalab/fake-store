@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     <>
-      <div className="product">
-        <div className="product-image">
-          <img src={product.image} alt="Product Image" />
-        </div>
-        <div className="product-content">
-          <div className="product-name">
-            <Link to={`${product.id}`} className="no-underline">
-              <h2>{product.title}</h2>
-            </Link>
+      <Link to={`/products/${product.id}`} className="no-underline">
+        <div className="product">
+          <div className="product-image">
+            <img src={product.image} alt="Product Image" />
           </div>
-          <span className="product-price">{product.price}$</span>
+          <div className="product-content">
+            <div className="product-name">
+              <h2>{product.title}</h2>
+            </div>
+            <span className="product-price">{product.price}$</span>
+          </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

@@ -1,22 +1,28 @@
+import { useParams } from "react-router-dom";
 import Category from "../components/Category";
 import ProductCard from "../components/ProductCard";
 import useGetPosts from "../hooks/useGetProducts";
 import MainLayout from "../layouts/MainLayout";
 
-const ProductsPage = () => {
+const ListingPage = () => {
+  const { categoryId } = useParams();
   const { products, isLoading } = useGetPosts();
+
+  const filteredProducts = categoryId
+    ? products.filter((product) => product.category === categoryId)
+    : products;
 
   if (isLoading) return <div>loading...</div>;
   return (
     <MainLayout>
-      {products.length > 0 ? (
+      {filteredProducts.length > 0 ? (
         <div className="products-page">
           <div className="category-filter">
             <h3>Category</h3>
-            <Category />
+            <Category activeCategory={categoryId} />
           </div>
           <div className="product-container">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
@@ -28,4 +34,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default ListingPage;

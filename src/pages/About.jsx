@@ -5,7 +5,7 @@ const About = () => {
   return (
     <MainLayout>
       <div className="about-container">
-        <h1>Welcome to Fake Store 😊</h1>
+        <h1>Welcome to Fake Store</h1>
         <p>
           We are passionate about providing the best products to our customers.
           Our platform connects you with a wide variety of products, ranging

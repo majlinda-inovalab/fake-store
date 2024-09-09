@@ -131,15 +131,6 @@ main {
   align-items: center;
 }
 
-.category-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  width: 250px;
-  padding: 6px 9px;
-}
-
 .product-item {
   display: flex;
   align-items: center;
@@ -211,4 +202,12 @@ main {
   border-radius: 50%;
   padding: 5px 10px;
   font-size: 14px;
+}
+.category-item div{
+  padding: 5px;
+  margin: 5px;
+}
+.name.active {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }

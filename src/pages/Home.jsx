@@ -1,5 +1,3 @@
-import { faStore } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import categoryImage from "../assets/electronics.jpg";
 import categoryImage1 from "../assets/jewelry.jpeg";
@@ -37,11 +35,6 @@ const Home = () => {
 
   return (
     <MainLayout>
-      <h1>
-        {" "}
-        asdfasd
-        <FontAwesomeIcon icon={faStore} />
-      </h1>
       <div className="category-container">
         {categories.map((category) => {
           return (

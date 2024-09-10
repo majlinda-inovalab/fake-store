@@ -1,3 +1,5 @@
+import { faStore } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -45,8 +47,19 @@ export const Header = () => {
 
         <li className="cart-icon">
           <Link to="/cart">
-            <i className="fas fa-shopping-cart"></i>
-            <span className="cart-count">{cartCount}</span>
+            <FontAwesomeIcon icon={faStore} />
+            <span
+              className="cart-count"
+              style={{
+                color: "#4f4531e6",
+                fontWeight: "bold",
+                verticalAlign: "top",
+                marginLeft: "2px",
+                padding: "0",
+              }}
+            >
+              {cartCount}
+            </span>
           </Link>
         </li>
       </ul>

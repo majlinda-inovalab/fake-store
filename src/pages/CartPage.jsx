@@ -9,6 +9,8 @@ const CartPage = () => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(storedCart);
   }, []);
+
+  
   const calculateTotalPrice = (product) => {
     return (product.price * product.quantity).toFixed(2);
   };
@@ -58,7 +60,7 @@ const CartPage = () => {
                 <td>{item.price}$</td>
                 <td>
                   <button onClick={() => updateQuantity(item.id, -1)}>-</button>
-                  {item.quantity}
+                  <span> {item.quantity} </span>
                   <button onClick={() => updateQuantity(item.id, 1)}>+</button>
                 </td>
                 <td>{calculateTotalPrice(item)}$</td>
@@ -84,25 +86,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-//   return (
-//     <MainLayout>
-//       <h1>Your Cart</h1>
-//       {cart.length > 0 ? (
-//         <div className="cart-items">
-//           {cart.map((item, index) => (
-//             <div key={index} className="cart-item">
-//               <img src={item.image} alt={item.title} />
-//               <h3>{item.title}</h3>
-//               <p>{item.price}$</p>
-//               <p></p>
-//             </div>
-//           ))}
-//         </div>
-//       ) : (
-//         <p>Your cart is empty</p>
-//       )}
-//     </MainLayout>
-//   );
-// };
-
-// export default CartPage;

@@ -31,25 +31,32 @@ const Product = () => {
             <img src={product.image} alt="Product Image" />
           </div>
           <div className="productContent">
+            <h3 className="title">{product.title}</h3>
             <div className="rating-reviews">
               <StarRating rating={product.rating.rate} />
-              <span className="reviews">{product.rating.count} reviews</span>
+              <p className="reviews">{product.rating.count} reviews</p>
             </div>
-            <h3 className="title">{product.title}</h3>
-            <div className="category">
-              <strong>Category: </strong>
-              {product.category}
+            <div className="price">
+              <strong>{product.price}$ </strong>
             </div>
-            <span className="price">
-              <strong>Price: </strong>
-              {product.price}$
-            </span>
-            <p className="description">
-              <strong>Description: </strong>
-              {product.description}
-            </p>
-            <button onClick={handleAddToCart}>Add to Cart</button>
-            {addedToCart && <p style={{ color: "green" }}>Added to Cart!</p>}
+
+            <p className="description">{product.description}</p>
+            <div className="add-to-cart">
+              <div className="quantity">
+                <button className="minus">-</button>
+                <span> 1 </span>
+                <button className="plus">+</button>
+              </div>
+              <button className="add" onClick={handleAddToCart}>
+                Add to Cart
+              </button>
+              {addedToCart && (
+                <p style={{ color: "#a6c07e", fontWeight: "bold" }}>
+                  {" "}
+                  Added to Cart!
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
